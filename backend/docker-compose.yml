@@ -1,0 +1,30 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: julialauries
+      POSTGRES_PASSWORD: 272697Ju*
+      POSTGRES_DB: consultorio
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  
+  backend:
+    build: ./backend
+    volumes:
+      - ./backend:/usr/src/app
+    ports:
+      - "3001:3001"
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend:/usr/src/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend

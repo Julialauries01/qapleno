@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "julialauries",
+    "password": "272697Ju*",
+    "database": "consultorio",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "julialauries",
+    "password": "272697Ju*",
+    "database": "consultorio_test",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "julialauries",
+    "password": "272697Ju*",
+    "database": "consultorio_production",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
